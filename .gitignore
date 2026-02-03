@@ -8,8 +8,9 @@ venv/
 # MacOS
 .DS_Store
 
-# Data (Optional: if you want to keep data private or local only)
+# Data
 data/db.json
+reference.*
 
 # IDE
 .vscode/
