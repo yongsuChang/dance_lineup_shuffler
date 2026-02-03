@@ -93,10 +93,20 @@ class App(ctk.CTk):
             frame = ctk.CTkFrame(self.result_container)
             frame.pack(fill="x", pady=5, padx=5)
             
-            ctk.CTkLabel(frame, text=team_text, font=ctk.CTkFont(weight="bold")).pack(side="left", padx=10)
+            # Left: Team Info
+            ctk.CTkLabel(frame, text=team_text, font=ctk.CTkFont(weight="bold", size=14)).pack(side="left", padx=10)
             
-            pairs_text = ", ".join([f"{p['leader']} & {p['follower'] if p['follower'] else 'Solo'}" for p in team['pairs']])
-            ctk.CTkLabel(frame, text=pairs_text).pack(side="right", padx=10)
+            # Right: Pairs & Photographers
+            # Using a nested frame for vertical list of pairs if multiple
+            pairs_frame = ctk.CTkFrame(frame, fg_color="transparent")
+            pairs_frame.pack(side="right", padx=10, fill="y")
+            
+            for p in team['pairs']:
+                dancers = f"{p['leader']} & {p['follower'] if p['follower'] else 'Solo'}"
+                photographer = p.get('photographer', '미배정')
+                
+                pair_line = ctk.CTkLabel(pairs_frame, text=f"{dancers} (📷 {photographer})")
+                pair_line.pack(anchor="e")
 
     def select_frame_by_name(self, name):
         # 버튼 색상 초기화

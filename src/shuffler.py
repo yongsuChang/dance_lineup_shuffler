@@ -74,11 +74,103 @@ class Shuffler:
         final_teams = []
         
         if opening_pairs:
-            # Group opening pairs by class? Or just one big opening team?
-            # Let's make one team per opening pair for now to be safe, or group by class.
-            # Simple approach: One team per pair
+            # Group opening pairs by class, or just 1 pair per team
+            # Usually opening is one big performance or separate small ones?
+            # Let's assume 1 pair = 1 team for now.
             for p in opening_pairs:
                 final_teams.append({"class": p["class"], "pairs": [p], "is_opening": True})
+        
+        final_teams.extend(all_teams)
+        
+        if ending_pairs:
+            for p in ending_pairs:
+                final_teams.append({"class": p["class"], "pairs": [p], "is_ending": True})
+
+        # 7. Assign Photographers
+        self.assign_photographers(final_teams, students, photo_exclusions, settings)
+
+        return final_teams
+
+    def assign_photographers(self, teams, students, exclusions, settings):
+        """
+        Assigns a photographer to each team (or each pair in a team).
+        Modifies the team objects in-place by adding a 'photographer' field to pairs or team.
+        """
+        # Exclusions set
+        exclude_names = set(exclusions)
+        
+        # Staff/Newbie exclusion options
+        exclude_staff = settings.get("exclude_staff_from_photo", False)
+        exclude_newbies = settings.get("exclude_newbies_from_photo", False) # Assuming we can identify newbies?
+        # We don't have 'Staff' or 'Newbie' flag in Student model explicitly yet, 
+        # unless 'exclusions' list covers it, or we rely on 'role' or specific exclusion list.
+        # The user said "Exclusion list is for photo exclusion". So we rely on `exclusions`.
+        
+        # Candidate Pool: All students minus exclusions
+        candidates = [s["nickname"] for s in students if s["nickname"] not in exclude_names]
+        
+        if not candidates:
+            print("No photographers available!")
+            return
+
+        # History tracking to ensure fairness/rotation
+        # name -> last_photo_turn_index
+        photo_history = {} 
+        
+        # Min rest gap for photographer (e.g. don't shoot immediately after dancing)
+        # Using same settings as dance rest or separate? Let's assume 1 or 2 turns.
+        min_photo_gap = 1 
+        
+        for i, team in enumerate(teams):
+            # We need one photographer per pair? Or per team?
+            # Reference said: "picks.push(pick)" per pair.
+            
+            team_dancers = self.get_dancers_in_team(team)
+            
+            # For each pair in the team, assign a photographer
+            for pair in team["pairs"]:
+                # 1. Filter candidates
+                valid_cands = []
+                for cand in candidates:
+                    # A. Cannot be dancing in this team
+                    if cand in team_dancers:
+                        continue
+                        
+                    # B. Cannot be shooting if they danced recently (Rest constraint)
+                    # (Optional: check if they are dancing in next turn i+1? - "blocked" in reference)
+                    # Let's check immediate neighbors (i-1, i+1)
+                    
+                    # Check prev turn (i-1) - did they dance?
+                    if i > 0:
+                        prev_dancers = self.get_dancers_in_team(teams[i-1])
+                        if cand in prev_dancers:
+                            continue
+                            
+                    # Check next turn (i+1) - will they dance?
+                    if i < len(teams) - 1:
+                        next_dancers = self.get_dancers_in_team(teams[i+1])
+                        if cand in next_dancers:
+                            continue
+                    
+                    valid_cands.append(cand)
+                
+                if not valid_cands:
+                    pair["photographer"] = "배정 불가"
+                    continue
+                
+                # 2. Pick best candidate (Least recently shot)
+                # Sort by last_photo_turn_index (None is -1 or very old)
+                valid_cands.sort(key=lambda x: photo_history.get(x, -999))
+                
+                # Pick from the ones who haven't shot in a while (start of list)
+                # To add randomness, pick from top N or just top 1?
+                # Let's pick randomly from the top 3 to avoid strict determinism
+                top_k = 5
+                pool = valid_cands[:top_k]
+                pick = random.choice(pool)
+                
+                pair["photographer"] = pick
+                photo_history[pick] = i
         
         final_teams.extend(all_teams)
         
