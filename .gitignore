@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# MacOS
+.DS_Store
+
+# Data (Optional: if you want to keep data private or local only)
+data/db.json
+
+# IDE
+.vscode/
+.idea/
