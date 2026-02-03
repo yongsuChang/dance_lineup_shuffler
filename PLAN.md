@@ -29,3 +29,6 @@
 - [x] Verify constraints are met with real data (Basic Logic).
 - [ ] User Interface polish.
 - [ ] Packaging (PyInstaller).
+
+## 6. Future Enhancements
+- [ ] **Excel Export**: Export the shuffled schedule to an `.xlsx` file. (Format to be provided by user).

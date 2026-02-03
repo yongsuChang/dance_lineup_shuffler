@@ -14,6 +14,10 @@ class Shuffler:
         pairs = data.get("pairs", [])
         classes = data.get("classes", [])
         settings = data.get("settings", {})
+        
+        # Load constraints for photographers
+        students = data.get("students", [])
+        photo_exclusions = data.get("photo_exclusions", [])
 
         if not pairs or not classes:
             return None
@@ -171,14 +175,6 @@ class Shuffler:
                 
                 pair["photographer"] = pick
                 photo_history[pick] = i
-        
-        final_teams.extend(all_teams)
-        
-        if ending_pairs:
-            for p in ending_pairs:
-                final_teams.append({"class": p["class"], "pairs": [p], "is_ending": True})
-
-        return final_teams
 
     def fix_consecutive_classes(self, teams):
         """
