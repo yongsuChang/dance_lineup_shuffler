@@ -19,10 +19,13 @@
 - [x] Settings/Configuration tab.
 - [x] Data Management tab (Classes, Students, Pairs, Exclusions).
   - [x] Excel Copy-Paste Import for Students and Pairs.
+  - [x] Edit functionality for Students and Pairs.
+  - [ ] Edit functionality for Classes.
+  - [ ] Solo checkbox for Pairs (instead of dropdown option).
 - [x] Home screen with "Shuffle" button and results display.
 - [ ] Interactive features (Re-shuffle, Lock specific slots, etc.).
 
 ## 5. Testing & Refinement
-- [ ] Verify constraints are met with real data.
+- [x] Verify constraints are met with real data (Basic Logic).
 - [ ] User Interface polish.
 - [ ] Packaging (PyInstaller).
