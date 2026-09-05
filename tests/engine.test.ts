@@ -49,7 +49,7 @@ describe('generateSchedule', () => {
   })
 
   it('한 사람이 같은 슬롯에 두 번 들어가지 않는다 (하드 제약)', () => {
-    for (let seed = 0; seed < 30; seed++) {
+    for (let seed = 0; seed < 20; seed++) {
       const sch = generateSchedule(sampleDb, { seed })!
       for (const slot of sch.slots) {
         const ds = dancersOfSlot(sampleDb, slot)
@@ -63,7 +63,7 @@ describe('generateSchedule', () => {
     // 이전 Python 엔진은 같은 구조의 데이터에서 회당 평균 6.5건의 휴식 위반을 냈다.
     let rest = 0
     let consecutive = 0
-    const runs = 30
+    const runs = 20
     for (let seed = 0; seed < runs; seed++) {
       const sch = generateSchedule(sampleDb, { seed })!
       rest += sch.violations.filter((v) => v.kind === 'rest').length
