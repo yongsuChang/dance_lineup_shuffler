@@ -12,5 +12,7 @@ export default defineConfig({
   resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
   test: {
     include: ['tests/**/*.test.ts', 'src/**/*.test.ts'],
+    // 엔진 테스트는 생성을 수십 번 반복한다. 느린 CI 러너를 감안한다.
+    testTimeout: 60_000,
   },
 })
