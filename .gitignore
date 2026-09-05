@@ -1,17 +1,22 @@
-# Python
+# Node
+node_modules/
+dist/
+*.local
+.vite/
+
+# 실명 데이터 - 절대 커밋하지 않는다. (샘플은 tests/fixtures/, src/data/ 의 익명화 데이터만 사용)
+/data/
+reference.*
+
+# Python (legacy)
 __pycache__/
-*.py[cod]
-*$py.class
 venv/
 .env
 
-# MacOS
+# OS / IDE
 .DS_Store
-
-# Data
-data/db.json
-reference.*
-
-# IDE
 .vscode/
 .idea/
+
+# TS build cache
+*.tsbuildinfo
