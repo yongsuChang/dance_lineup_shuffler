@@ -1,0 +1,586 @@
+{
+  "settings": {
+    "year": 2026,
+    "semester": "1",
+    "min_rest_leader": 2,
+    "min_rest_follower": 2,
+    "exclude_staff_from_photo": true,
+    "exclude_newbies_from_photo": true
+  },
+  "classes": [
+    {
+      "name": "스탠다드 베이직",
+      "team_count": 2
+    },
+    {
+      "name": "스탠다드 베리에이션",
+      "team_count": 4
+    },
+    {
+      "name": "라틴 베이직",
+      "team_count": 2
+    },
+    {
+      "name": "라틴 베리에이션",
+      "team_count": 3
+    }
+  ],
+  "pairs": [
+    {
+      "class": "라틴 베리에이션",
+      "leader": "공책",
+      "follower": "스케치",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베리에이션",
+      "leader": "딸기",
+      "follower": "버건디",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베리에이션",
+      "leader": "딸기",
+      "follower": "두루미",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베리에이션",
+      "leader": "코알라",
+      "follower": "피아노",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베리에이션",
+      "leader": "코알라",
+      "follower": "위성",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베리에이션",
+      "leader": "사과",
+      "follower": "민트",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베리에이션",
+      "leader": "사과",
+      "follower": "올리브",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베이직",
+      "leader": "연필",
+      "follower": "안개",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베이직",
+      "leader": "팔레트",
+      "follower": "은하",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베이직",
+      "leader": "오보에",
+      "follower": "은하",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베이직",
+      "leader": "사과",
+      "follower": "오로라",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베이직",
+      "leader": "공책",
+      "follower": "붓",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "라틴 베이직",
+      "leader": "파도",
+      "follower": "붓",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "하늘",
+      "follower": "안개",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "하늘",
+      "follower": "올리브",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "카키",
+      "follower": "스케치",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "코알라",
+      "follower": "버건디",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "코알라",
+      "follower": "여우",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "달빛",
+      "follower": "피아노",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "달빛",
+      "follower": "두루미",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베리에이션",
+      "leader": "딸기",
+      "follower": "민트",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베이직",
+      "leader": "파도",
+      "follower": "은하",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베이직",
+      "leader": "팔레트",
+      "follower": "피아노",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베이직",
+      "leader": "크레파스",
+      "follower": "첼로",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베이직",
+      "leader": "공책",
+      "follower": "붓",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    },
+    {
+      "class": "스탠다드 베이직",
+      "leader": "자몽",
+      "follower": "붓",
+      "is_solo": false,
+      "is_opening": false,
+      "is_ending": false
+    }
+  ],
+  "students": [
+    {
+      "nickname": "공책",
+      "class": "라틴 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "피아노",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "하늘",
+      "class": "라틴 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "올리브",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "딸기",
+      "class": "라틴 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "안개",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "사과",
+      "class": "라틴 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "위성",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "민트",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "두루미",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "성운",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "스케치",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "지우개",
+      "class": "라틴 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "공책",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "은하",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "파도",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "망고",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "팔레트",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "클라리넷",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "연필",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "붓",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "사슴",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "여우",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "사과",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "숲",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "바다",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "체리",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "별빛",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "토끼",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "키위",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "노을",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "공책",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "은하",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "파도",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "망고",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "팔레트",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "클라리넷",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "연필",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "붓",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "사슴",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "여우",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "사과",
+      "class": "라틴 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "숲",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "바다",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "체리",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "부엉이",
+      "class": "라틴 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "하늘",
+      "class": "스탠다드 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "피아노",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "크레파스",
+      "class": "스탠다드 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "은하",
+      "class": "스탠다드 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "카키",
+      "class": "스탠다드 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "올리브",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "팔레트",
+      "class": "스탠다드 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "붓",
+      "class": "스탠다드 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "딸기",
+      "class": "스탠다드 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "안개",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "자몽",
+      "class": "스탠다드 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "첼로",
+      "class": "스탠다드 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "공책",
+      "class": "스탠다드 베리에이션",
+      "role": "leader"
+    },
+    {
+      "nickname": "민트",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "드럼",
+      "class": "스탠다드 베이직",
+      "role": "leader"
+    },
+    {
+      "nickname": "여우",
+      "class": "스탠다드 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "두루미",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "비올라",
+      "class": "스탠다드 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "성운",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "망고",
+      "class": "스탠다드 베이직",
+      "role": "follower"
+    },
+    {
+      "nickname": "스케치",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    },
+    {
+      "nickname": "지우개",
+      "class": "스탠다드 베리에이션",
+      "role": "follower"
+    }
+  ],
+  "photo_exclusions": [
+    "딸기",
+    "안개",
+    "공책",
+    "은하"
+  ]
+}

@@ -1,34 +1,18 @@
 # Dance Lineup Shuffler Development Plan
 
-## 1. Project Setup
-- [x] **Tech Stack Decision**: Python with CustomTkinter (Cross-platform GUI), JSON for storage. **PyInstaller** will be used to generate a Windows `.exe` file.
-- [x] Initialize project environment (virtualenv, requirements).
-- [x] Create basic project structure.
+## v2 (2026-09) — 웹앱 전환 (완료)
+- [x] Python/CustomTkinter → Vite + React + TypeScript SPA 로 전환
+- [x] 엔진 재작성: 점수 기반 담금질 탐색, 하드 제약(중복 출연) + 소프트 제약(휴식, 같은 반 연속)
+- [x] 팔로워 휴식 설정, 운영진/신입 제외 설정이 실제로 동작
+- [x] 사진 담당 공평 배정 + 촬영 전후 휴식
+- [x] 위반 목록 표시, 슬롯 고정 후 재셔플, 드래그 정렬
+- [x] 엑셀 내보내기, 인쇄, JSON 백업/복원, v1 db.json 변환
+- [x] 실명 데이터 저장소에서 제거, 익명 샘플로 대체
+- [x] vitest 테스트, GitHub Pages 배포 워크플로
 
-## 2. Requirements Gathering (Completed)
-- [x] Define "Tables" structure.
-- [x] Collect specific settings/constraints for shuffling (User to provide).
-- [x] Define data storage schema (JSON).
-
-## 3. Core Logic Implementation (In Progress)
-- [x] Create `DataManager` class to handle JSON file I/O.
-- [x] Implement `Shuffler` engine with constraint logic (Basic implementation).
-
-## 4. GUI Implementation (In Progress)
-- [x] Main application window setup.
-- [x] Settings/Configuration tab.
-- [x] Data Management tab (Classes, Students, Pairs, Exclusions).
-  - [x] Excel Copy-Paste Import for Students and Pairs.
-  - [x] Edit functionality for Students and Pairs.
-  - [ ] Edit functionality for Classes.
-  - [ ] Solo checkbox for Pairs (instead of dropdown option).
-- [x] Home screen with "Shuffle" button and results display.
-- [ ] Interactive features (Re-shuffle, Lock specific slots, etc.).
-
-## 5. Testing & Refinement
-- [x] Verify constraints are met with real data (Basic Logic).
-- [ ] User Interface polish.
-- [ ] Packaging (PyInstaller).
-
-## 6. Future Enhancements
-- [ ] **Excel Export**: Export the shuffled schedule to an `.xlsx` file. (Format to be provided by user).
+## 다음 후보
+- [ ] 슬롯 안 페어 순서/구성 직접 편집 (페어를 다른 슬롯으로 드래그)
+- [ ] 여러 결과 후보를 나란히 비교
+- [ ] 결과 공유 링크 (URL 에 압축 인코딩)
+- [ ] 반별 곡/시간 정보와 총 러닝타임 계산
+- [ ] 다국어 (영어)
